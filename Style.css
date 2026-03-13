@@ -1,0 +1,224 @@
+body{
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    background-image: url(Imagens/Fundo\ \(1\).jpg);
+    background-size: cover;
+    display: flex;
+}
+h1{
+    font-size: 90px;
+    margin:0;
+    color: red;
+    font-family: "Winter", sans-serif;
+    text-shadow: 0 0 20px rgb(10, 130, 18);
+    pointer-events: none;
+}
+h2{
+    text-align: center;
+    font-size: 40.5px;
+    margin:0;
+    color: red;
+    font-family: "Winter", sans-serif;
+    text-shadow: 0 0 20px  rgb(10, 130, 18);
+    pointer-events: none;
+}
+h3{
+    margin:0;
+    pointer-events: none;
+}
+ul{
+    margin: 0;
+    list-style: none;
+    gap: 25px;
+    display: flex;
+    position: absolute;
+    left: 430px;
+    top: 25px;
+}
+button{
+    background-color: transparent;
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+    color: red;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+button:hover{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+i{
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+p{
+    pointer-events: none;
+}
+/*butão centra*/
+.teste{
+    padding: 10px;
+    color:#FCEAD2;
+    background-color: red;
+    font-family: "Winter", sans-serif;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    top: 350px;
+    left: 640px;
+    width: fit-content;
+    height: fit-content;
+    text-shadow: 0 0 5px rgb(45, 5, 5);
+    transition: transform 0.5s ease;
+}
+.teste:hover{
+    transform: scale(1.1);
+}
+.principal{
+    position: absolute;
+    left: 560px;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+}
+.descrição{
+    padding: 10px;
+    height: fit-content;
+    width: auto;
+    font-size: small;
+    position: absolute;
+    top: 550px;
+    left: 560px;
+    font-family: "Winter", sans-serif;
+    color: red;
+    border-style: solid;
+    border-radius: 20px;
+    text-align: center;
+}
+/*Janela do produto*/
+.produto-page{
+    background-color:#FCEAD2;
+    position: absolute;
+    z-index: 10;
+    width: 700px;
+    top: 40px;
+    left: -36px;
+    border-style: solid;
+    border-color: rgb(56, 91, 26);
+    border-radius: 25px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.produto:hover + .produto-page, .produto:focus-within + .produto-page, .produto-page:hover, .produto-page:focus-within{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px);
+}
+.Item-1:hover i, .Item-1:focus-within i{
+    transform: rotate(180deg)
+}
+/*Cabeçalho da janela*/
+.cabeçalho{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    margin: 15px;
+    background-color: rgb(249, 228, 200);
+    border-radius: 25px;    
+}
+.mail-calendar{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+.mail, .calendar{
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+.tomato-produto{
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+.tomato-cabeçalho:hover .tomato-produto{
+    border-color: rgb(56, 91, 26);
+}
+.mail-button:hover .mail, .calendar-button:hover .calendar{
+    border-color: rgb(56, 91, 26);
+}
+/*Grade da Janela*/
+.grade{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+.grade button{ 
+    display: flex; 
+    align-items: center;
+}
+
+.grade img{
+    width: 80px;
+    margin-right: -10px;
+}
+.grade p{
+    margin: 0;
+    font-weight: 550;
+    font-size: 15px;
+    color: red;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.grade button:hover p{
+    border-color: rgb(56, 91, 26);
+}
+/*Fim da Janela Produto*/   
+/*Janela Sobre*/
+.sobre-page{
+    background-color:#FCEAD2;
+    position: absolute;
+    z-index: 10;
+    width: 700px;
+    top: 40px;
+    left: -36px;
+    border-style: solid;
+    border-color: rgb(56, 91, 26);
+    border-radius: 25px;
+    padding: 15px;
+    display: flex; 
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.sobre:hover + .sobre-page, .sobre:focus-within + .sobre-page, .sobre-page:hover, .sobre-page:focus-within{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(10px);
+}
+.Item-2:hover i, .Item-2:focus-within i{
+    transform: rotate(180deg);
+}
+
+/*JANELA RECURSOS*/
+.recursos-page{
+    background-color:#FCEAD2;
+    border: rgb(56, 91, 26) solid;
+    border-width: 700px;
+    border-radius: 25px;
+    z-index: 10;
+    top: 40px;
+    left: -36px;
+    
+}
+/*fontes*/
+@font-face {
+    font-family: "Winter";
+    src: url(Fontes/Blue\ Winter.ttf) format("truetype");
+}
