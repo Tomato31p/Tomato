@@ -239,8 +239,8 @@ p{
     background-color: #f9dcb9;
 }
 .recursos:hover + .recursos-page, .recursos:focus-within + .recursos-page, .recursos-page:hover, .recursos-page:focus-within{
-    visibility: visible;
     opacity: 1;
+    visibility: visible;
     transform: translateY(10px);
 }
 .Item-3:hover i, .Item-3:focus-within i{
