@@ -232,7 +232,7 @@ p{
     display: flex; 
     align-items: center; 
     gap: 10px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     border-radius: 20px;
 }
 .cell:hover{
